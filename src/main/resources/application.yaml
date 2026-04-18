@@ -1,3 +1,8 @@
 spring:
   application:
     name: mcp-demo
+  ai:
+    ollama:
+      embedding:
+        options:
+          model=mxbai-embed-large:
