@@ -1,0 +1,28 @@
+name: vinay_first_github_workflow.yml
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  build-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: temurin
+          cache: 'gradle'
+
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
+      - name: Run Clean and Build
+        run: ./gradlew clean build
+
+
+
