@@ -21,7 +21,7 @@ public class HelloMcpController {
             new AtomicReference<>(BigInteger.ZERO);
 
      public HelloMcpController() {
-         namesList = new ArrayList<>();
+          namesList = new ArrayList<>();
      }
 
     @GetMapping("/hello")
